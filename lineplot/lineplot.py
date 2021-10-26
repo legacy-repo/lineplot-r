@@ -2,17 +2,17 @@
 from __future__ import unicode_literals
 
 import os
-from mk_media_extension.plugin import BasePlugin
+from biovis_media_extension.plugin import BasePlugin
 
 
 class LinePlotRPlugin(BasePlugin):
     """
-    LinePlotRPlugin plugin for mk_media_extension.
+    LinePlotRPlugin plugin for next service engine.
 
     :Example:
-    @line-plot-r()
+    @lineplot-r()
     """
-    plugin_name = 'line-plot-r'
+    plugin_name = 'lineplot-r'
     plugin_dir = os.path.dirname(os.path.abspath(__file__))
     is_server = True
 

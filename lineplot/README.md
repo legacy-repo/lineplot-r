@@ -1,4 +1,4 @@
-## `line-plot-r[choppy-report-plugin]`
+## `nse-lineplot [Next Service Engine's Plugin]`
 ### Description
 Interactive line plot visualization from a Shiny app(r version).
 
@@ -20,10 +20,10 @@ AGL1 ST02[2]_vs_ST01[1]   2.5 crossLab       0.8197314
 ### Usage
 
 ```
-@line-plot-r(dataFile='linebarwitherr_data.rds', dataType='rds', title='',
-             xAxis='BIN', xTitle='VAF (%)', yAxis='reproducibility', yTitle='Reproducibility',
-             colorAttr='panel', shapeAttr='type', xLog10=True, enableSE=True,
-             showpanel=True, subtitle='', text='', queryURL='')
+@nse-lineplot(dataFile='linebarwitherr_data.rds', dataType='rds', title='',
+              xAxis='BIN', xTitle='VAF (%)', yAxis='reproducibility', yTitle='Reproducibility',
+              colorAttr='panel', shapeAttr='type', xLog10=True, enableSE=True,
+              showpanel=True, subtitle='', text='', queryURL='')
 ```
 
 ### Arguments
@@ -71,8 +71,8 @@ Jingcheng Yang(yjcyxky@163.com)
 
 ```
 # If you need to show a default interactive plot by using sample data
-@line-plot-r()
+@nse-lineplot()
 
 # If you have a custom data, you need to reset these arguments at least.
-@line-plot-r(dataFile='linebarwitherr_data.rds', dataType='rds', xAxis='BIN', yAxis='reproducibility')
+@nse-lineplot(dataFile='linebarwitherr_data.rds', dataType='rds', xAxis='BIN', yAxis='reproducibility')
 ```

@@ -1,8 +1,8 @@
-include LICENSE.txt
+include LICENSE.md
 include README.md
 include requirements.txt
-recursive-include line_plot *
+recursive-include lineplot *
 recursive-exclude * __pycache__
 recursive-exclude * *.pyc
 recursive-exclude * *.pyo
-recursive-exclude line_plot.egg-info *
+recursive-exclude lineplot.egg-info *

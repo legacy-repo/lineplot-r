@@ -1,12 +1,9 @@
-# {% set data = load_setup_py_data() %}
-{% set version = '0.1.0' %}
-{% set url = 'https://choppy.3steps.cn/go-choppy/line-plot-r-plugin/' %}
-{% set description = 'An choppy plugin to draw an interactive line plot.' %}
-{% set long_description = 'The line plot plugin will draw an interactive line plot by using ggplot2 library.' %}
+{% set data = load_setup_py_data() %}
+
 
 package:
-  name: line-plot-r-plugin
-  version: {{ version }}
+  name: lineplot-r
+  version: {{ data.version }}
 
 
 source:
@@ -15,8 +12,6 @@ source:
 
 build:
   include_recipe: True
-  entry_points:
-    - line-plot-r = line_plot.line_plot:LinePlotRPlugin
 
 
 requirements:
@@ -26,7 +21,6 @@ requirements:
 
   run:
     - python
-    - mk-media-extension>=0.1.0
     - r-dplyr
     - r-shiny
     - r-plotly
@@ -35,17 +29,17 @@ requirements:
     - r-shinybs
     - r-shinyjs
 
-# test:
-#   imports:
-#     - line_plot
+test:
+  imports:
+    - lineplot
 
 about:
-  home: {{ url }}
-  license: BSD 3-Clause
+  home: {{ data.url }}
+  license: MIT
   license_file: LICENSE.md
-  license_family: BSD
+  license_family: MIT
 
-  summary: {{ description }}
-  description: {{ long_description }}
+  summary: {{ data.description }}
+  description: {{ data.long_description }}
   doc_url: http://docs.3steps.cn
-  dev_url: {{ url }}
+  dev_url: {{ data.url }}
